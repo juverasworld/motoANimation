@@ -46,16 +46,20 @@ body {
 }
 
 
-#dragme {
+#dragme, .dragme-child {
     position: absolute;
     width: 5vw;
     height: 5vw;
     border-radius: 50%;
     /* background-color: blue; */
     z-index: 2;
-    border: 2px dotted #fff;
+    /* animation: circle 10s ease-in-out  infinite; */
 }
+.dragme-child{
+    animation: circle 10s linear infinite;
+    border: 2px dotted #fff;
 
+}
 .cir-p {
     display: flex;
     align-items: center;
@@ -76,4 +80,13 @@ body {
     width: 1vw;
     height: 1vw;
     background-color: #ff9b0f;
+}
+
+@keyframes circle {
+    0%{
+        rotate: -360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
 }
